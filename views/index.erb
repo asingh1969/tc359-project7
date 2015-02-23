@@ -9,12 +9,18 @@
 	<% end %>
 </div>
 
-<form>
-	Year: <input name="year" type="number">
-	<p></p>
-	Month: <input name="month" type="number">
-	<p></p>
-	Day: <input name="day" type="number">
-	<p></p>
-	<button type="submit">Submit</button>
+<form class="form-horizontal">
+	<div class="form-group">
+		<label for="inputYear">Year</label>
+		<input type="number" name="year" class="form-control" id="inputYear" value="">
+	</div>
+	<div class="form-group">
+		<label for="inputMonth">Month</label>
+		<input type="number" name="month" class="form-control" id="inputMonth" value="">
+	</div>
+	<div class="form-group">
+		<label for="inputDay">Day</label>
+		<input type="number" name="day" class="form-control" id="inputDay" value="">
+	</div>
+	<button type="submit" class="btn btn-default">Submit</button>
 </form>
