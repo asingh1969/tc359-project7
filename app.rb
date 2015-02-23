@@ -1,12 +1,13 @@
 require 'sinatra'
-require 'sinatra/content_for'
 require 'holidapi'
 
 class MyWebApp < Sinatra::Base
-	helpers Sinatra::ContentFor
 	get '/' do
 		time = Time.new
-		@curr_yholiday = HolidApi.get(country: 'us', year: time.year, month: time.month)
+		params['year'] ||= Time.now.year
+		params['month'] ||= Time.now.month
+		params['day'] ||= Time.now.day
+		@curr_yholiday = HolidApi.get(country: 'us', year: params['year'], month: params['month'], day: params['day'])
 		@b_holiday = HolidApi.get(country: 'us', year: '1994', month: 10)
 		erb :"index"
 	end

@@ -1,4 +1,20 @@
-<h1>Holidays this month</h1>
-<% @curr_yholiday.each do |holiday|%>
-	<p class="lead"><%= holiday[0]["name"] %></p>
-<% end %>
+<div>
+	<h1>Holidays this month</h1>
+	<% if @curr_yholiday.any? %>
+		<% @curr_yholiday.each do |holiday|%>
+			<p class="lead"><%= holiday["name"] %></p>
+		<% end %>
+	<% else %>
+		<p class="lead"> No Holidays </p>
+	<% end %>
+</div>
+
+<form>
+	Year: <input name="year" type="number">
+	<p></p>
+	Month: <input name="month" type="number">
+	<p></p>
+	Day: <input name="day" type="number">
+	<p></p>
+	<button type="submit">Submit</button>
+</form>

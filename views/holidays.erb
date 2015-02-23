@@ -1,0 +1,14 @@
+<div class="row">
+	<div class="col-md-6">
+		<h1>Holidays this month</h1>
+		<% @curr_yholiday.each do |holiday|%>
+			<p class="lead"><%= holiday[0]["name"] %></p>
+		<% end %>
+	</div>
+	<div class="col-md-6">
+		<h1>Holidays on my Birthday Month</h1>
+		<% @b_holiday.each do |holiday2|%>
+			<p class="lead"><%= holiday2[0]["name"] %></p>
+		<% end %>
+	</div>
+</div>
