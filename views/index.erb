@@ -12,15 +12,15 @@
 <form class="form-horizontal">
 	<div class="form-group">
 		<label for="inputYear">Year</label>
-		<input type="number" name="year" class="form-control" id="inputYear" value=<%= params['year']%> required>
+		<input type="number" name="year" class="form-control" id="inputYear" value=<%= params['year']%> required max="9999">
 	</div>
 	<div class="form-group">
 		<label for="inputMonth">Month</label>
-		<input type="number" name="month" class="form-control" id="inputMonth" value=<%= params['month']%> required>
+		<input type="number" name="month" class="form-control" id="inputMonth" value=<%= params['month']%> required max="12">
 	</div>
 	<div class="form-group">
 		<label for="inputDay">Day</label>
-		<input type="number" name="day" class="form-control" id="inputDay" value=<%= params['day']%> required>
+		<input type="number" name="day" class="form-control" id="inputDay" value=<%= params['day']%> required max="31">
 	</div>
 	<button type="submit" class="btn btn-default">Submit</button>
 </form>
